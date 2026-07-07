@@ -1,0 +1,20 @@
+{
+  "name": "bounceban",
+  "description": "Verify email addresses with the BounceBan API: single and bulk verification specializing in catch-all (accept-all) and SEG-protected emails, quick free/disposable/role/syntax checks, credits and rate-limit management, and webhooks.",
+  "version": "1.0.0",
+  "author": {
+    "name": "BounceBan",
+    "email": "dev@bounceban.com",
+    "url": "https://bounceban.com"
+  },
+  "homepage": "https://bounceban.com/public/doc/api.html",
+  "repository": "https://github.com/bounceban-com/skill-email-verification",
+  "keywords": [
+    "email",
+    "email-verification",
+    "deliverability",
+    "catch-all",
+    "list-cleaning",
+    "bounceban"
+  ]
+}
