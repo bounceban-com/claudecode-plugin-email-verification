@@ -31,19 +31,22 @@ The key is sent in the `Authorization` header **without** a `Bearer` prefix. Eac
 
 ## Installation
 
-### From a local checkout (development)
+### From a local checkout
 
 ```bash
-claude --plugin-dir /path/to/claudecode-plugin-email-verification
+git clone https://github.com/bounceban-com/claudecode-plugin-email-verification.git
+claude --plugin-dir ./claudecode-plugin-email-verification
 ```
 
-### Via a marketplace
+This loads the plugin for the session — useful for trying it out or for development. Run `/reload-plugins` inside Claude Code to pick up local changes.
 
-If this plugin is published in a plugin marketplace:
+### Via the community marketplace
+
+Once the plugin is available in the [Claude Code community marketplace](https://github.com/anthropics/claude-plugins-community), install it with:
 
 ```shell
-/plugin marketplace add <marketplace-repo>
-/plugin install bounceban@<marketplace-name>
+/plugin marketplace add anthropics/claude-plugins-community
+/plugin install bounceban@claude-community
 ```
 
 ## Usage
@@ -98,3 +101,7 @@ Live values are returned by `GET /v1/account`.
 - [Get an API key](https://bounceban.com/app/api/settings)
 - [Pricing](https://bounceban.com/pricing)
 - [Claude Code plugin docs](https://code.claude.com/docs/en/plugins)
+
+## License
+
+[MIT](LICENSE)
