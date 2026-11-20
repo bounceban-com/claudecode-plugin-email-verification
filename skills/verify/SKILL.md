@@ -21,7 +21,7 @@ Procedure:
    ```
 
    On HTTP 408, retry the same request (free within 30 minutes).
-4. For more than 5 emails (or a file): create a bulk task with `POST /v1/verify/bulk` (or `/v1/verify/bulk/file` for CSV), poll `/v1/verify/bulk/status`, then fetch results from `/v1/verify/bulk/dump`.
+4. For more than 5 emails (or a file): create a bulk task with `POST /v1/verify/bulk` (or `/v1/verify/bulk/file` for CSV), poll `/v1/verify/bulk/status`, then fetch results from `/v1/verify/bulk/dump`. If the user asks to cancel a running task, stop it with `POST /v1/verify/bulk/stop` (credits for unverified emails are refunded) and report `not_verified_count` alongside the result counts.
 5. Report per email: `result` (deliverable / risky / undeliverable / unknown), `score`, and notable flags (`is_disposable`, `is_accept_all`, `is_role`, `is_free`). For lists, summarize counts by result and list the undeliverable addresses.
 
 Never resubmit an email while its status is `verifying` or `queue` — each submit costs 1 credit.
